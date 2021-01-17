@@ -19,12 +19,11 @@ To Build
 
 ```bash
 ./autogen.sh
-./configure
+./configure --disable-wallet
 make
 make install # optional
 ```
 
-This will build bitcoin-qt as well, if the dependencies are met.
 
 Dependencies
 ---------------------
@@ -299,3 +298,10 @@ To build executables for ARM:
 
 
 For further documentation on the depends system see [README.md](../depends/README.md) in the depends directory.
+
+Open Window
+sudo ufw allow 8933
+sudo ufw allow 8932
+
+cd ./src/bitcoind -daemon
+

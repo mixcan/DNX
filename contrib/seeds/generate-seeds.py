@@ -85,7 +85,7 @@ def parse_spec(s, defaultport):
         (host,_,port) = s.partition(':')
 
     if not port:
-        port = defaultport
+        port = 8933
     else:
         port = int(port)
 
@@ -128,7 +128,7 @@ def main():
     g.write(' * IPv4 as well as onion addresses are wrapped inside an IPv6 address accordingly.\n')
     g.write(' */\n')
     with open(os.path.join(indir,'nodes_main.txt'), 'r', encoding="utf8") as f:
-        process_nodes(g, f, 'pnSeed6_main', 8333)
+        process_nodes(g, f, 'pnSeed6_main', 8933)
     g.write('\n')
     with open(os.path.join(indir,'nodes_test.txt'), 'r', encoding="utf8") as f:
         process_nodes(g, f, 'pnSeed6_test', 18333)
